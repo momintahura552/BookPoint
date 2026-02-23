@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     body {
+            margin: 0;
+            padding: 0;
+        }
+    nav {
+            background: #2f5d50;
+            padding: 10px 20px;
+            display: flex;
+          justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        .logo {
+            color: white;
+            font-size: 30px;
+            margin: 0;
+        }
+         a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        input{
+            background: white;
+            color: black;
+            font-size: 17px;
+        } 
+        /* nav close */
+       .content {
+          display: flex;           /* side by side layout */
+          align-items: flex-start; /* align top of image and text */
+          gap: 20px;               /* space between image and text */
+         }
+
+        
+
+          .para {
+            flex: 1;
+           
+            width: 150px;
+            height: 200px;
+            padding: 70px;
+           
+          }
+          .para h1 {
+              margin-top: 0;
+              margin-bottom: 10px;
+              margin: 10px;
+}
+
+        .para p {
+          margin: 10px;
+          line-height: 1.9;
+        }
+
+         .pic img {
+          width: 550px;            /* adjust as needed */
+          height: auto;            /* maintain aspect ratio */
+          flex-shrink: 0;          /* prevent image from shrinking */
+          
+          padding: 70px;
+        }
+
+        button{
+    background-color:  #2f5d50;
+    color: white;
+    height: 40px;
+    width: 150px;
+    /* margin: 10px; */
+  
+   
+}
+     
+     footer{
+            background: #2f5d50;
+            padding: 20px 0;
+            color: white;    
+            text-align: center;
+           justify-content: center;
+           align-items: center;
+        }
+       
+  </style>
+</head>
+<body>
+  
+    <nav>
+        <h1 class="logo">BookPoint</h1>
+        
+        <div>
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="Login.html">
+                <input type="submit" name="login" value="login">
+            </a>
+            <a href="Sing-up.html">
+                <input type="submit" name="Sign-Up" value="Sign-Up">
+            </a>
+            
+        </div>
+    </nav><br><br><br>
+    <div class="content">
+       <div class="pic">
+          <img src="book/richdad.png">
+      </div>
+      <div class="para">
+        <h1>Rich Dad</h1>
+      
+        <p>Rich Dad Poor Dad is mainly about achieving financial freedom through financial literacy, contrasting the mindset of a financially savvy "rich dad" with Kiyosaki's educated but financially struggling "poor dad," emphasizing that the rich make money work for them by acquiring assets (like real estate, businesses) rather than just working for a salary, and shifting from an employee mentality to an entrepreneurial one.</p>
+        <br>
+        <button type="submit" onclick="window.location.href='read_richdad.html';">Read Book</button><br><br>
+        <button type="submit" onclick="window.location.href='index.html';">Back</button><br>
+      </div>
+     
+    </div><br><br>
+     <footer>
+        <div class="footer">
+
+            
+            <p>© Copyright <strong><span>BookPoint</span></strong>. All Rights Reserved</p> 
+            <p>Designed by  Tahura Momin</p> 
+        </div>
+    </footer> 
+</body>
+</html>

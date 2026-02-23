@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookPoint</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: #2f5d50;
+            padding: 10px 20px;
+            display: flex;
+          justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        .logo {
+            color: white;
+            font-size: 30px;
+            margin: 0;
+        }
+         a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        input{
+            background: white;
+            color: black;
+            font-size: 17px;
+        }
+   
+         /* Image styling */
+        img {
+            height: 300px;
+            width: 1370px;  
+        }
+    
+
+
+.search-box {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;    /* centers vertically if you set a height */
+}
+.search-box input {
+   
+    width: 550px;
+    padding: 12px 18px;
+    border: 2px solid  #2f5d50;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+    color:  #2f5d50;
+    font-size: 30px;
+    
+    
+}
+
+
+
+
+.all-book {
+    /* border: 3px solid black; */
+    display: grid;
+    grid-template-columns: repeat(3, 348px);
+    gap: 20px;
+
+    justify-content: center;
+   
+}
+ .book{
+    border: 2px solid black;
+    gap: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+   
+ }
+
+.image {
+    width: 348px;
+    height: 250px;
+    gap: 100px;
+   
+    /* margin: 10px; */
+    /* border-radius: 4px; */
+}
+button{
+    background-color:  #2f5d50;
+    color: white;
+    height: 40px;
+    width: 150px;
+    /* margin: 10px; */
+  
+   
+}
+     footer{
+            background: #2f5d50;
+            padding: 20px 0;
+            color: white;    
+            text-align: center;
+           justify-content: center;
+           align-items: center;
+        }
+
+    </style> 
+</head>
+<body>
+
+    <nav>
+        <h1 class="logo">BookPoint</h1>
+        
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about_us.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="Login.html">
+                <input type="submit" name="login" value="login">
+            </a>
+            <a href="Sing-up.html">
+                <input type="submit" name="Sign-Up" value="Sign-Up">
+            </a>
+            
+        </div>
+    </nav><br><br><br>
+
+     
+    <div class="boad">
+        <img src="bookscape.webp">
+    </div><br><br>
+
+     <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search book by title..." onkeyup="searchBooks()">
+    </div><br><br>
+    <div class="all-book">
+        <div class="book">
+        <img class="image" src="book/richdad.png">
+        <h1>Rich Dad</h1>
+        <button type="submit" onclick="window.location.href='rich-dad.html';">View Details</button>
+        </div>
+        
+          <div class="book">
+        <img class="image" src="book/money.webp">
+        <h1>The Psychology of Money</h1>
+        <button type="submit"  onclick="window.location.href='money.html';">View Details</button>
+        </div>
+
+          <div class="book">
+        <img class="image" src="book/harry-potterjpg.jpg">
+        <h1>Harry Potter</h1>
+        <button type="submit" onclick="window.location.href='harry.html';" >View Details</button>
+        </div>
+          <div class="book">
+        <img class="image" src="book/Gopal.jpg">
+        <h1>Life's Amazing Secrets</h1>
+        <button type="submit" onclick="window.location.href='gopal.html';">View Details</button>
+        </div>
+          <div class="book">
+        <img class="image" src="book/Atomic Habits.webp">
+        <h1>Atomic Habits</h1>
+        <button type="submit" onclick="window.location.href='habits.html';">View Details</button>
+        </div>
+
+          <div class="book">
+        <img class="image" src="book/focus.avif">
+        <h1>Focus on What Matters</h1>
+        <button type="submit" onclick="window.location.href='focus.html';">View Details</button>
+        </div> 
+  <br><br>       
+</div>
+
+  
+   <footer>
+        <div class="footer">
+            <p>© Copyright <strong><span>BookPoint</span></strong>. All Rights Reserved</p> 
+            <p>Designed by  Tahura Momin</p> 
+        </div>
+    </footer> 
+
+  <script>
+function searchBooks() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let books = document.getElementsByClassName("book");
+
+    for (let i = 0; i < books.length; i++) {
+        let title = books[i].getElementsByTagName("h1")[0].innerText.toLowerCase();
+
+        if (title.includes(input)) {
+            books[i].style.display = "block";
+        } else {
+            books[i].style.display = "none";
+        }
+    }
+}
+</script>  
+
+</body>
+</html>

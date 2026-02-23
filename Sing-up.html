@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background: #2f5d50;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+           
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            background: #40524d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #004182;
+        }
+
+        a {
+            font-size: 14px;
+            color: #0a66c2;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="index.html" method="post">
+        <h2>Sing-Up</h2>
+
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Enter username" required>
+        
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter password" required>
+
+          <label>Gender</label>
+        <input type="radio" name="Gender" placeholder="Gender" required>Female
+         <input type="radio" name="Gender" placeholder="Gender" required>Male
+
+
+
+        <label class="checkbox-label"><!--cheaked-->
+            <input type="checkbox" name="remember">
+            Save password
+        </label>
+
+        <button type="submit">Sing-Up</button>
+
+        <div class="links">
+            <a href="#">Forgot username?</a> | 
+            <a href="#">Forgot password?</a>
+        </div>
+    </form>
+
+</body>
+</html>
